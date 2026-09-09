@@ -1,0 +1,29 @@
+[package]
+name = "zip2dmg"
+version = "0.1.0"
+edition = "2021"
+description = "Convert a ZIP archive containing a macOS .app bundle into an unsigned DMG disk image"
+license = "AGPL-3.0-or-later"
+
+[lib]
+name = "zip2dmg"
+path = "src/lib.rs"
+
+[[bin]]
+name = "zip2dmg"
+path = "src/main.rs"
+
+[dependencies]
+fstool = { git = "https://github.com/Sg4Dylan/fstool.git", branch = "zip2dmg" }
+udif = { git = "https://github.com/Sg4Dylan/dpp.git", branch = "zip2dmg", default-features = false, features = ["create", "xz2"] }
+zip = { git = "https://github.com/Sg4Dylan/zip2.git", branch = "zip2dmg" }
+clap = { version = "4", features = ["derive"] }
+uuid = "1"
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1"
+plist = "1"
+base64 = "0.22"
+
+[dev-dependencies]
+ds_store = "0.3"

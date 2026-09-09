@@ -1,0 +1,33 @@
+# Rust build output
+/target
+debug/
+release/
+
+# Cargo backup files
+Cargo.lock.bak
+**/*.rs.bk
+
+# Test and coverage artifacts
+/coverage
+*.profraw
+tarpaulin-report.html
+lcov.info
+
+# Output images produced during manual testing
+*.dmg
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
